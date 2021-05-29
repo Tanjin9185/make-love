@@ -6,8 +6,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
-import Chats from './Chats';
 import ChatView from './ChatView';
 import { selectUser } from './features/appSlice';
 import { useDispatch, useSelector } from 'react-redux';
