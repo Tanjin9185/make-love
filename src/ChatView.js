@@ -43,7 +43,7 @@ function ChatView() {
                 }}
             </CountdownCircleTimer>
             </div>
-            
+
         </div>
     )
 }

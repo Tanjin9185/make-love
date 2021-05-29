@@ -4,16 +4,14 @@ import WebcamCapture from './WebcamCapture';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Link
 } from "react-router-dom";
+import Chats from './Chats';
 import ChatView from './ChatView';
 import { selectUser } from './features/appSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import Login from './Login';
-
-import Preview from './Preview';
-import Chats from './Chats';
-
 
 
 function App() {
@@ -22,10 +20,9 @@ function App() {
 
 
   return (
-    <div className="app">
+    <div className="App">
       <h1>Tanjin, How are you? </h1>
       <Router>
-
         {!user ? (
           <Login />
         ) : (
@@ -39,16 +36,6 @@ function App() {
             </Route>
             <Route path="/">
               <WebcamCapture />
-
-        <div className="app__body">
-
-          <Switch>
-            <Route path="/chats">
-              <Chats />
-            </Route>
-            <Route path="/preview">
-              <Preview />
-
             </Route>
             <Route exact path="/">
               <WebcamCapture />
@@ -56,7 +43,7 @@ function App() {
           </Switch>
         </div>
         )}
-        
+
       </Router>
     </div>
   );
