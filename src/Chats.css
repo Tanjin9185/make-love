@@ -10,7 +10,7 @@
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #869c24;
+    background-color: #24949c;
     height: 50px;
 }
 
@@ -40,7 +40,21 @@
     opacity: 1;
 }
 
-.chat_posts {
+.chats_posts {
+    box-shadow: 1px -7px 7px -6px rgba(0, 0, 0, 0.44);
     height: 360px;
-    background-color: white;
+    margin-top: -9px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(209, 209, 209);
+    overflow: scroll;
+}
+
+.chats_posts::-webkit-scrollbar {
+    display: none;
+}
+
+.chats_posts {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
